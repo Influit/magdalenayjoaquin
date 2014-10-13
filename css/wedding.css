@@ -1,0 +1,303 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	margin: auto;
+	background: #fff;
+	-webkit-font-smoothing: antialiased;
+	font-size: 15px;
+	color: #1B242B;
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
+	
+}
+
+ /* Sticky footer styles
+      -------------------------------------------------- */
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+      }
+   
+
+
+/* -------------------- Fonts -------------------- */
+
+a{
+	color: #2FAD70;
+}
+
+h1{
+	font-weight: 200;
+	font-size: 72px;
+	color: #1B242B;
+	font-family: 'Amatic SC', cursive;
+	margin: 0 0 30px 0;
+}
+
+h2{
+	font-family: 'Amatic SC', cursive;
+	font-size: 32px;
+  margin: 0;
+
+}
+
+.date h2{
+	font-weight: 700;
+	margin-top: 5px;
+}
+
+p{
+	font-family: 'Fauna One', serif;
+	font-weight: 300;
+  line-height: 190%;
+}
+
+p.view-older{
+  text-align: center;
+}
+
+p.bajada {
+	font-family: 'Fauna One', serif;
+	font-weight: 300;
+  line-height: 27px;
+}
+
+span.highlight{
+	font-weight: normal;
+	font-size: 15px;
+  text-decoration: line-through;
+}
+
+p.muted.credit{
+	font-size: 13px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+p.gridly-date.front {
+  text-align: left;
+  margin-top: 5px;
+}
+
+/* -------------------- Images -------------------- */
+
+img{
+  margin-bottom: 10px;
+}
+
+/* -------------------- Layout -------------------- */
+
+.titles{
+	text-align: center;
+	max-width: 800px;
+	margin: 0 auto 50px;
+	position: relative;
+}
+
+.ourwork{
+	
+	width: 100%;
+	height: 500px;
+	text-align: center;
+	margin: 250px 0;
+}
+.nav{
+  background-image: url(../images/nav-bg-2.png);
+  background-repeat: no-repeat;
+  background-size: 1440px 276px;
+  background-position: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 275px;
+}
+
+.timeline{
+	height: auto;
+	margin-bottom: 20px;
+}
+
+/* -------------------- Custom Timeline -------------------- */
+* {
+  box-sizing: border-box;   
+}
+
+ul {
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  width: 800px;
+  margin: 30px auto;
+  padding: 0;
+}
+
+ul:after {
+  content:"";
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top:0;
+  width: 4px;
+  margin-left: -2px;
+  min-height: 100%;
+  background-color: #f9f9f9;
+}
+
+li {
+  z-index: 2;
+  position: relative;
+  width: 380px;
+  padding: 20px;
+  float: left;
+  margin-bottom: 30px;
+  background-color: #f9f9f9;
+}
+
+li.left {
+  float: left;
+  clear: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+li.right {
+  float: right;
+  clear: right;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+li.highlight {
+  float: none;
+  clear: both;
+  width: auto;
+  border: 5px solid #fff;
+}
+
+/* arrow */
+
+li:before {
+	content:"";
+	z-index: 1;
+	position: absolute;
+	top: 14px;
+	width:0;
+	height:0;
+	border: 6px solid transparent;
+}		
+li.left:before {
+	right: -12px;
+	border-left-color: #f9f9f9;	
+}	
+li.right:before {
+	border-right-color: #f9f9f9;	
+	left: -12px;
+}		
+
+li.left:before {
+  left: auto;
+}
+
+li.right + li.left:before,
+li.left + li.right:before {
+  top: 36px;
+}
+
+li.highlight:before {
+  left: 50%;
+  margin-left: -6px;
+  right: auto;
+  top: -6px;
+}
+
+/* dot */
+
+li:after {
+  content:"";
+  z-index: 1;
+  position: absolute;
+  top: 14px;
+  right: -27px;
+  left: -28px;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  background-color: #ccc;
+  transition: .2s;
+}
+
+li:hover:after {
+  background-color: #999;
+  top: 12px;
+  right: -29px;
+  left: -29px;
+  width: 18px;
+  height: 18px;
+}
+
+li.left:after {
+  left: auto;
+}
+
+li.right + li.left:after,
+li.left + li.right:after {
+  top: 36px;
+}
+
+li.right + li.left:hover:after,
+li.left + li.right:hover:after {
+  top: 34px;
+}
+
+li.right:after {
+  right: auto;
+}
+
+li.highlight:after {
+  left: 50%;
+  margin-left: -7px;
+  right: auto;
+  top: -24px;
+}
+
+li.highlight:hover:after {
+  margin-left: -9px;
+  top: -26px;
+}
+
+.gridly-copy{
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+/* -------------------- Clearfix -------------------- */
+
+.clearfix {
+	overflow: hidden;
+}
+
+* html .clearfix {
+	height: 1%;
+}
